@@ -1,0 +1,26 @@
+<div>
+
+    <div id="botonTiro" *ngFor="let lanzada of lanzadas; let i = index">
+        <p>Numero de tiradas (3 maximo):  </p>
+      <button (click)="tiro(i)" [disabled]="bloqueados[i] ">Tirar Dado {{i + 1}}</button>
+      <input type="number" [value]="lanzada"/>
+      <button (click)="bloquearDado(i)">Bloquear dado</button>
+      <button (click)="desbloquearDado(i)">Desbloquear dado</button> 
+      
+    </div>
+  </div>
+  <br>
+  <button (click)="reseteoDado()">Resetear Jugada</button>
+  
+
+  <div>
+    <h2>Elegir mejor objetivo:</h2>
+  </div>
+
+<div>
+   <h2>Objetivos menores</h2>
+</div>
+
+<div>
+    <h2>Objetivos mayores</h2>
+</div>
